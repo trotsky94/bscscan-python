@@ -5,7 +5,7 @@ from bscscan.enums.modules_enum import ModulesEnum as modules
 
 class Contracts:
     @staticmethod
-    def get_contract_abi(contract_address: str):
+    def get_contract_abi(contract_address: str, ApiToken: str):
         """Get ABI for a specific contract, if uploaded.
 
         Args:
@@ -18,7 +18,7 @@ class Contracts:
 
             from bscscan import BscScan
 
-            async with BscScan(YOUR_API_KEY) as client:
+            async with BscScan(ApiToken) as client:
                 print(
                     await client.get_contract_abi(
                         contract_address="0x0000000000000000000000000000000000001004"
@@ -39,7 +39,7 @@ class Contracts:
         )
 
     @staticmethod
-    def get_contract_source_code(contract_address: str):
+    def get_contract_source_code(contract_address: str, ApiToken: str):
         """Get source code for a specific contract, if uploaded.
 
         Args:
@@ -52,7 +52,7 @@ class Contracts:
 
             from bscscan import BscScan
 
-            async with BscScan(YOUR_API_KEY) as client:
+            async with BscScan(ApiToken) as client:
                 print(
                     await client.get_contract_source_code(
                         contract_address="0x0000000000000000000000000000000000001004"
