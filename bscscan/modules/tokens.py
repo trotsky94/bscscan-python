@@ -6,7 +6,7 @@ from bscscan.enums.tags_enum import TagsEnum as tags
 
 class Tokens:
     @staticmethod
-    def get_total_supply_by_contract_address(contract_address: str):
+    def get_total_supply_by_contract_address(contract_address: str,ApiToken:str):
         """Get total supply of token by its contract address.
 
         Args:
@@ -19,7 +19,7 @@ class Tokens:
 
             from bscscan import BscScan
 
-            async with BscScan(YOUR_API_KEY) as client:
+            async with BscScan(ApiToken) as client:
                 print(
                     await client.get_total_supply_by_contract_address(
                             contract_address="0xe9e7cea3dedca5984780bafc599bd69add087d56"
@@ -40,7 +40,7 @@ class Tokens:
         )
 
     @staticmethod
-    def get_circulating_supply_by_contract_address(contract_address: str):
+    def get_circulating_supply_by_contract_address(contract_address: str,ApiToken:str):
         """Get circulating supply of token by its contract address.
 
         Args:
@@ -53,7 +53,7 @@ class Tokens:
 
             from bscscan import BscScan
 
-            async with BscScan(YOUR_API_KEY) as client:
+            async with BscScan(ApiToken) as client:
                 print(
                     await client.get_circulating_supply_by_contract_address(
                         contract_address="0xe9e7cea3dedca5984780bafc599bd69add087d56"
@@ -74,7 +74,7 @@ class Tokens:
         )
 
     @staticmethod
-    def get_acc_balance_by_token_contract_address(contract_address: str, address: str):
+    def get_acc_balance_by_token_contract_address(contract_address: str, address: str,ApiToken:str):
         """Get account balance given a contract address.
 
         Args:
@@ -88,7 +88,7 @@ class Tokens:
 
             from bscscan import BscScan
 
-            async with BscScan(YOUR_API_KEY) as client:
+            async with BscScan(ApiToken) as client:
                 print(
                     await client.get_acc_balance_by_token_contract_address(
                         contract_address="0xe9e7cea3dedca5984780bafc599bd69add087d56",
