@@ -6,6 +6,7 @@ from bscscan.enums.modules_enum import ModulesEnum as modules
 class Logs:
     @staticmethod
     def get_logs(
+        ApiToken:str,
         from_block: int,
         to_block: int,
         address: str,
@@ -48,7 +49,7 @@ class Logs:
 
             from bscscan import BscScan
 
-            async with BscScan(YOUR_API_KEY) as client:
+            async with BscScan(ApiToken) as client:
                 print(
                     await client.get_logs(
                         from_block=4993830,
